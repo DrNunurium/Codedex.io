@@ -1,0 +1,35 @@
+#We have to calculate the surface area of some planets of the solar system. We are given the area formula (a=4*pi*r2).
+#We need to import pi from the math module as it is needed on the formula and choice from random module so the code randomly chooses planets form the list.
+
+from math import pi
+from random import choice as ch
+
+planets = [
+    'Mercury',
+      'Venus',
+        'Earth',
+          'Mars',
+            'Saturn'
+            ]
+
+r=0 #we have to define r variable here as r for each planet is given below.
+
+random_planet=ch(planets) #random_planet will be any of the planets for the list randomly chosen as we use ch(planets)
+
+if random_planet == 'Mercury':
+ r = 2440
+elif random_planet == 'Venus':
+ r = 6052
+elif random_planet == 'Earth':
+ r = 6371
+elif random_planet == 'Mars':
+ r = 3390
+elif random_planet == 'Saturn':
+ r = 58232
+else:
+ print ("Oops! An error occurred.")
+
+area=4*pi*(r*r)
+
+print(random_planet + f" {area:.2f}") #with this line, we print the name of the planet and its area surface together. area:.2f is used to round the area value to 2 decimal numbers.
+
